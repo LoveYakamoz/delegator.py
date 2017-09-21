@@ -133,7 +133,7 @@ class Command(object):
     def run(self, block=True, binary=False):
         """Runs the given command, with or without pexpect functionality enabled."""
         self.blocking = block
-
+        print ("block: ", self.blocking)
         # Use subprocess.
         if self.blocking:
             popen_kwargs = self._default_popen_kwargs.copy()
@@ -180,6 +180,7 @@ class Command(object):
 
     def block(self):
         """Blocks until process is complete."""
+        print (self._uses_subprocess)
         if self._uses_subprocess:
             # consume stdout and stderr
             stdout, stderr = self.subprocess.communicate()
@@ -254,9 +255,10 @@ def chain(command, timeout=TIMEOUT):
 
 def run(command, block=True, binary=False, timeout=TIMEOUT):
     c = Command(command, timeout=timeout)
+    print(c.__repr__())
     c.run(block=block, binary=binary)
 
     if block:
         c.block()
-
+    
     return c
