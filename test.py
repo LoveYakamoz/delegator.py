@@ -16,15 +16,22 @@ class WidgetTestCase(unittest.TestCase):
         setUp()和tearDown()都是TestCase类中定义的方法
         '''
         pass
-  
+    '''
     def test_delegator_run(self):     
         c = delegator.run(['sleep', '3'], block=False)
         c.out
-
+    '''
     def test_delegator_dir_run(self):
         c = delegator.run(['dir'], block=False)
-        c.out
+        print (c.out)
 
+    def test_ls_run(self):
+        c = delegator.run(['ls', '-lrt'], block=False)
+        print (c.out)
+
+    def test_cowsay_run(self):
+        c = delegator.run(['cowsay'], block=True)
+        print (c.out)
 
 if __name__ == "__main__": 
     unittest.main()

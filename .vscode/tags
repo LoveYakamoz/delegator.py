@@ -9,11 +9,12 @@ PopenSpawn	../delegator.py	/^from pexpect.popen_spawn import PopenSpawn$/;"	kind
 STR_TYPES	../delegator.py	/^    STR_TYPES = (str, )$/;"	kind:variable	line:12
 STR_TYPES	../delegator.py	/^    STR_TYPES = (str, unicode)$/;"	kind:variable	line:10
 TIMEOUT	../delegator.py	/^TIMEOUT = 30$/;"	kind:variable	line:14
+WidgetTestCase	../test.py	/^class WidgetTestCase(unittest.TestCase):$/;"	kind:class	line:3
 __init__	../delegator.py	/^    def __init__(self, cmd, timeout=TIMEOUT):$/;"	kind:member	line:18
 __repr__	../delegator.py	/^    def __repr__(self):$/;"	kind:member	line:28
 _default_pexpect_kwargs	../delegator.py	/^    def _default_pexpect_kwargs(self):$/;"	kind:member	line:48
 _default_popen_kwargs	../delegator.py	/^    def _default_popen_kwargs(self):$/;"	kind:member	line:36
-_expand_args	../delegator.py	/^def _expand_args(command):$/;"	kind:function	line:216
+_expand_args	../delegator.py	/^def _expand_args(command):$/;"	kind:function	line:217
 _pexpect_out	../delegator.py	/^    def _pexpect_out(self):$/;"	kind:member	line:68
 _popen_args	../delegator.py	/^    def _popen_args(self):$/;"	kind:member	line:32
 _uses_pexpect	../delegator.py	/^    def _uses_pexpect(self):$/;"	kind:member	line:60
@@ -21,9 +22,10 @@ _uses_subprocess	../delegator.py	/^    def _uses_subprocess(self):$/;"	kind:memb
 author	../setup.py	/^    author='Kenneth Reitz',$/;"	kind:variable	line:36
 author_email	../setup.py	/^    author_email='me@kennethreitz.com',$/;"	kind:variable	line:37
 block	../delegator.py	/^    def block(self):$/;"	kind:member	line:181
-chain	../delegator.py	/^def chain(command, timeout=TIMEOUT):$/;"	kind:function	line:238
+chain	../delegator.py	/^def chain(command, timeout=TIMEOUT):$/;"	kind:function	line:239
 classifiers	../setup.py	/^    classifiers=[$/;"	kind:variable	line:42
 codecs	../setup.py	/^import codecs$/;"	kind:namespace	line:6
+delegator	../test.py	/^import delegator$/;"	kind:namespace	line:1
 delegator.py	../delegator.py	1;"	kind:file	line:1
 description	../setup.py	/^    description='Subprocesses for Humans 2.0.',$/;"	kind:variable	line:34
 dirname	../setup.py	/^    from os import dirname$/;"	kind:namespace	line:12
@@ -41,13 +43,14 @@ os	../delegator.py	/^import os$/;"	kind:namespace	line:1
 os	../setup.py	/^import os$/;"	kind:namespace	line:4
 out	../delegator.py	/^    def out(self):$/;"	kind:member	line:84
 pid	../delegator.py	/^    def pid(self):$/;"	kind:member	line:113
-pipe	../delegator.py	/^    def pipe(self, command, timeout=None):$/;"	kind:member	line:191
+pipe	../delegator.py	/^    def pipe(self, command, timeout=None):$/;"	kind:member	line:192
 py_modules	../setup.py	/^    py_modules=['delegator'],$/;"	kind:variable	line:39
 required	../setup.py	/^required = [$/;"	kind:variable	line:27
 return_code	../delegator.py	/^    def return_code(self):$/;"	kind:member	line:122
 run	../delegator.py	/^    def run(self, block=True, binary=False):$/;"	kind:member	line:133
-run	../delegator.py	/^def run(command, block=True, binary=False, timeout=TIMEOUT):$/;"	kind:function	line:255
+run	../delegator.py	/^def run(command, block=True, binary=False, timeout=TIMEOUT):$/;"	kind:function	line:256
 send	../delegator.py	/^    def send(self, s, end=os.linesep, signal=False):$/;"	kind:member	line:161
+setUp	../test.py	/^    def setUp(self):$/;"	kind:member	line:9
 setup	../setup.py	/^from setuptools import setup$/;"	kind:namespace	line:8
 setup.py	../setup.py	1;"	kind:file	line:1
 shlex	../delegator.py	/^import shlex$/;"	kind:namespace	line:3
@@ -57,6 +60,11 @@ std_in	../delegator.py	/^    def std_in(self):$/;"	kind:member	line:130
 std_out	../delegator.py	/^    def std_out(self):$/;"	kind:member	line:64
 subprocess	../delegator.py	/^import subprocess$/;"	kind:namespace	line:2
 sys	../setup.py	/^import sys$/;"	kind:namespace	line:5
+tearDown	../test.py	/^    def tearDown(self):$/;"	kind:member	line:13
 terminate	../delegator.py	/^    def terminate(self):$/;"	kind:member	line:175
+test.py	../test.py	1;"	kind:file	line:1
+test_delegator_dir_run	../test.py	/^    def test_delegator_dir_run(self):$/;"	kind:member	line:24
+test_delegator_run	../test.py	/^    def test_delegator_run(self):     $/;"	kind:member	line:20
+unittest	../test.py	/^import unittest$/;"	kind:namespace	line:2
 url	../setup.py	/^    url='https:\/\/github.com\/kennethreitz\/delegator',$/;"	kind:variable	line:38
 version	../setup.py	/^    version='0.0.13',$/;"	kind:variable	line:33
